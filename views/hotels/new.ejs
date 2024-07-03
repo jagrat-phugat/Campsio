@@ -1,0 +1,62 @@
+<% layout("layouts/boilerplate") %>
+    <div class="row">
+        <h1 class="text-center">Add Hotel</h1>
+        <div class="col-6 offset-3 mb-5">
+            <form action="/hotels" method="POST" novalidate class="form-validated" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="hotel[title]" required>
+                    <div class="invalid-feedback">
+                        Field cannot remain empty.
+                    </div>
+                    <div class="valid-feedback">
+                        Good to go!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="hotel[location]" required>
+                    <div class="invalid-feedback">
+                        Field cannot remain empty.
+                    </div>
+                    <div class="valid-feedback">
+                        Good to go!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="image">Add Images</label>
+                    <div class="input-group mb-3 mt-2">
+                        <input type="file" class="form-control" id="image" name="image" multiple>
+                    </div>
+                </div>
+                <div class="mb3">
+                    <label for="price" class="form-label">Hotel Price</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="price">₹</span>
+                        <input type="text" class="form-control" placeholder="0.00" id="price" aria-label="price"
+                            aria-describedby="price-label" name="hotel[price]" required>
+                        <div class="invalid-feedback">
+                            Field cannot remain empty.
+                        </div>
+                        <div class="valid-feedback">
+                            Good to go!
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="hotel[description]"
+                        required></textarea>
+                    <div class="invalid-feedback">
+                        Field cannot remain empty.
+                    </div>
+                    <div class="valid-feedback">
+                        Good to go!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Hotel</button>
+                </div>
+            </form>
+        </div>
+    </div>
